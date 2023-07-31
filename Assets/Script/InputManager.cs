@@ -5,7 +5,7 @@ using UnityEngine;
 public class InputManager : MonoBehaviour
 {
     [SerializeField] private PlayerController pc;
-    [SerializeField] private int numOfPlayer;
+    [SerializeField] public int numOfPlayer;
     private Vector2 direction;
 
     private void GetDirection()
@@ -18,5 +18,9 @@ public class InputManager : MonoBehaviour
     {
         GetDirection();
         pc.Move(direction);
+        if (Input.GetButtonDown("FireP"+numOfPlayer))
+        {
+            pc.ShootBullet();
+        }
     }
 }

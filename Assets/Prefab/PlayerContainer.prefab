@@ -150,6 +150,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 4581385303938764277}
+  rb2: {fileID: 3832831471208947, guid: f345de0e63e204dcd95ff14ceb0e27e9, type: 3}
+  bulletPrefab: {fileID: 1626700917354647969, guid: f345de0e63e204dcd95ff14ceb0e27e9, type: 3}
+  stepForce: 16
 --- !u!114 &3372688952223616360
 MonoBehaviour:
   m_ObjectHideFlags: 0
