@@ -7,6 +7,7 @@ public class RoomManager : MonoBehaviour
     [SerializeField] private GameObject[] enemys;
     [SerializeField] private GameObject[] doors;
     [SerializeField] private bool[] playerIsInTheRoom;
+    public float activeEnemys;
 
     private void AllPlayerAreInTheRoom()
     {
@@ -17,6 +18,7 @@ public class RoomManager : MonoBehaviour
 
         foreach (GameObject enemy in enemys)
         {
+            activeEnemys += 0.5f;
             enemy.SetActive(true);
         }
     }
@@ -30,7 +32,23 @@ public class RoomManager : MonoBehaviour
             {
                 AllPlayerAreInTheRoom();
             }
+            if (playerIsInTheRoom[0] && playerIsInTheRoom[1])
+            {
+                AllPlayerAreInTheRoom();
+            }
 
+        }
+    }
+
+    public void EnemyDied()
+    {
+        activeEnemys--;
+        if (activeEnemys < 1)
+        {
+            foreach (GameObject door in doors)
+            {
+                door.SetActive(false);
+            }
         }
     }
 }
