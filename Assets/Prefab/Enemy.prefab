@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8999386855995373734}
   - component: {fileID: 5339644134420367073}
   - component: {fileID: -9217792746054374752}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -120,5 +120,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbef26a75fcc64988a81fb0e44c3c5f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roomManager: {fileID: 0}
   Enemi: {fileID: 8225417790130781904}
   currentState: 0
