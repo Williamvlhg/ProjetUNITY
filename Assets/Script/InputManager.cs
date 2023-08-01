@@ -6,6 +6,7 @@ public class InputManager : MonoBehaviour
 {
     [SerializeField] private PlayerController pc;
     [SerializeField] public int numOfPlayer;
+    [SerializeField] private GameObject menuPause;
     private Vector2 direction;
 
     private void GetDirection()
@@ -21,6 +22,10 @@ public class InputManager : MonoBehaviour
         if (Input.GetButtonDown("FireP"+numOfPlayer))
         {
             pc.ShootBullet();
+        }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            menuPause.SetActive(true);
         }
     }
 }
