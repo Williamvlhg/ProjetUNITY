@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 7648017240988194793}
   - component: {fileID: 1098208188789255754}
   - component: {fileID: 4581385303938764277}
-  - component: {fileID: 1442335051681846074}
-  - component: {fileID: 3372688952223616360}
+  - component: {fileID: 1912188313049142281}
+  - component: {fileID: 240806610351249592}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -137,7 +137,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &1442335051681846074
+--- !u!114 &1912188313049142281
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -146,26 +146,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 2936274734238937426}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1cee0996874cd4f53819247cc6de426e, type: 3}
+  m_Script: {fileID: 11500000, guid: 6173131f7bbf42a4ba14e7deb575c435, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pc: {fileID: 240806610351249592}
+  numOfPlayer: 1
+  menuPause: {fileID: 0}
+--- !u!114 &240806610351249592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2936274734238937426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d910f003f3d7d6b4b898039aeb753287, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 4581385303938764277}
   bulletPrefab: {fileID: 1626700917354647969, guid: f345de0e63e204dcd95ff14ceb0e27e9, type: 3}
-  stepForce: 13
---- !u!114 &3372688952223616360
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2936274734238937426}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c97edbd9742f444abb852de1f87adb2f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pc: {fileID: 1442335051681846074}
-  numOfPlayer: 1
+  stepForce: 16
+  shootSound: {fileID: 8300000, guid: 3b47a325b2daf4843b014f8b5d5d36c3, type: 3}
 --- !u!1 &5835008421052634729
 GameObject:
   m_ObjectHideFlags: 0

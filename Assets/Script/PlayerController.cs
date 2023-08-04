@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private float stepForce;
     private Vector3 lastDirection;
+    [SerializeField] private AudioClip shootSound;
 
     public void Move(Vector2 moveTo)
     {
@@ -17,6 +18,7 @@ public class PlayerController : MonoBehaviour
     }
     public void ShootBullet()
     {
+        SoundManager.instanceSound.PlaySound(shootSound);
         GameObject bullet = Instantiate(bulletPrefab, transform.position + transform.forward, Quaternion.Euler(90f, 0f, 0f));
         Rigidbody bulletrb = bullet.GetComponent<Rigidbody>();
         bulletrb.AddForce(transform.forward * 100, ForceMode.Impulse) ;
@@ -33,7 +35,7 @@ public class PlayerController : MonoBehaviour
         if (direction != Vector2.zero)
         {
             lastDirection = new Vector3(direction.x, 0f, direction.y);
-            transform.forward = lastDirection; // Rotate the player to face the movement direction
+            transform.forward = lastDirection; 
         }
     }
 

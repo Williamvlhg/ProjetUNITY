@@ -21,6 +21,7 @@ public class RoomManager : MonoBehaviour
             activeEnemys += 0.5f;
             enemy.SetActive(true);
         }
+
     }
 
     private void OnTriggerEnter(Collider other)
@@ -28,10 +29,6 @@ public class RoomManager : MonoBehaviour
         if(other.TryGetComponent(out InputManager inputManager))
         {
             playerIsInTheRoom[inputManager.numOfPlayer - 1] = true;
-            if (playerIsInTheRoom[0] && playerIsInTheRoom[1])
-            {
-                AllPlayerAreInTheRoom();
-            }
             if (playerIsInTheRoom[0] && playerIsInTheRoom[1])
             {
                 AllPlayerAreInTheRoom();
