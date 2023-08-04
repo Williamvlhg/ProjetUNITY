@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
     public void Move(Vector2 moveTo)
     {
         direction = moveTo;
-        rb.velocity = new Vector3(direction.x * stepForce, 0, direction.y * stepForce);
+        rb.velocity = new Vector3(direction.x * stepForce, rb.velocity.y, direction.y * stepForce);
     }
     public void ShootBullet()
     {
